@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', default=False).lower() == 'true'
+DEBUG = os.environ.get('DEBUG', default=False) == 'True'
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
 
@@ -109,6 +109,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # CORS_ORIGIN_WHITELIST = (os.environ.get('FRONT_END_URL'),)
 CORS_ALLOW_ORIGINS = [os.environ.get('FRONT_END_URL')]
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_METHODS = ["DELETE", "GET", "OPTIONS", "PATCH", "POST", "PUT"]
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
