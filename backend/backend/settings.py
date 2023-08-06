@@ -108,9 +108,15 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # CORS_ORIGIN_WHITELIST = (os.environ.get('FRONT_END_URL'),)
-CORS_ALLOW_ORIGINS = [os.environ.get('FRONT_END_URL')]
+# CORS_ALLOW_ORIGINS = [os.environ.get('FRONT_END_URL')]
+# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_ORIGINS = [
+    "https://to-do-app-frontend-9u70r8o8f-lpnizmeee.vercel.app/"]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = ["DELETE", "GET", "OPTIONS", "PATCH", "POST", "PUT"]
+CORS_ALLOW_HEADERS = ["authorization", "content-type",
+                      "x-csrftoken", "x-requested-with", "accept", "origin", "x-token"]
+CORS_ALLOW_CREDENTIALS = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
