@@ -107,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-CORS_ORIGIN_WHITELIST = os.environ.get('FRONT_END_URL').split(' ')
+CORS_ORIGIN_WHITELIST = (os.environ.get('FRONT_END_URL'),)
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
