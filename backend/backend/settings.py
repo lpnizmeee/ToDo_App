@@ -107,8 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-CORS_ORIGIN_WHITELIST = (os.environ.get('FRONT_END_URL'),)
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ORIGIN_WHITELIST = (os.environ.get('FRONT_END_URL'),)
 CORS_ALLOW_ORIGINS = [os.environ.get('FRONT_END_URL')]
 
 # Internationalization
